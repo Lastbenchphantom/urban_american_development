@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navy-900: #0f172a;
+    --navy-800: #1e293b;
+    --navy-600: #334155;
+    --navy-50: #f8fafc;
+    --slate-900: #0f172a;
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --slate-300: #cbd5e1;
+    --slate-200: #e2e8f0;
+    --slate-100: #f1f5f9;
+    --slate-50: #f8fafc;
+    --rose-500: #f43f5e;
+    --rose-600: #e11d48;
+    --amber-50: #fffbeb;
+    --amber-100: #fef3c7;
+    --green-50: #f0fdf4;
+    --green-100: #dcfce7;
+    --blue-50: #eff6ff;
+    --blue-100: #dbeafe;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-slate-900 bg-white;
+  }
+
+  /* Focus ring accessibility */
+  *:focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@layer utilities {
+  .text-navy-900 {
+    color: var(--navy-900);
+  }
+  .text-navy-800 {
+    color: var(--navy-800);
+  }
+  .text-navy-600 {
+    color: var(--navy-600);
+  }
+  .text-navy-700 {
+    color: var(--navy-600);
+  }
+  .bg-navy-900 {
+    background-color: var(--navy-900);
+  }
+  .bg-navy-800 {
+    background-color: var(--navy-800);
+  }
+  .bg-navy-50 {
+    background-color: var(--navy-50);
+  }
+  .hover\:bg-navy-800:hover {
+    background-color: var(--navy-800);
+  }
+  .focus-visible\:ring-navy-900:focus-visible {
+    box-shadow: 0 0 0 2px var(--navy-900);
+  }
+  .border-navy-900 {
+    border-color: var(--navy-900);
+  }
+  .text-slate-900 {
+    color: var(--slate-900);
+  }
+  .text-slate-700 {
+    color: var(--slate-700);
+  }
+  .text-slate-600 {
+    color: var(--slate-600);
+  }
+  .text-slate-500 {
+    color: var(--slate-500);
+  }
+  .text-slate-400 {
+    color: var(--slate-400);
+  }
+  .text-slate-300 {
+    color: var(--slate-300);
+  }
+  .bg-slate-50 {
+    background-color: var(--slate-50);
+  }
+  .bg-slate-100 {
+    background-color: var(--slate-100);
+  }
+  .bg-slate-200 {
+    background-color: var(--slate-200);
+  }
+  .bg-slate-900 {
+    background-color: var(--slate-900);
+  }
+  .bg-slate-800 {
+    background-color: #1e293b;
+  }
+  .border-slate-200 {
+    border-color: var(--slate-200);
+  }
+  .border-slate-300 {
+    border-color: var(--slate-300);
+  }
+  .border-slate-800 {
+    border-color: #334155;
+  }
+  .text-rose-500 {
+    color: var(--rose-500);
+  }
+  .text-rose-600 {
+    color: var(--rose-600);
+  }
+  .bg-rose-500 {
+    background-color: var(--rose-500);
+  }
+  .border-rose-500 {
+    border-color: var(--rose-500);
+  }
+  .focus-visible\:ring-rose-500:focus-visible {
+    box-shadow: 0 0 0 2px var(--rose-500);
+  }
+  .bg-amber-50 {
+    background-color: var(--amber-50);
+  }
+  .bg-amber-100 {
+    background-color: var(--amber-100);
+  }
+  .text-amber-700 {
+    color: #a16207;
+  }
+  .text-amber-800 {
+    color: #78350f;
+  }
+  .bg-green-50 {
+    background-color: var(--green-50);
+  }
+  .bg-green-100 {
+    background-color: var(--green-100);
+  }
+  .text-green-700 {
+    color: #15803d;
+  }
+  .text-green-800 {
+    color: #166534;
+  }
+  .border-green-100 {
+    border-color: var(--green-100);
+  }
+  .bg-blue-50 {
+    background-color: var(--blue-50);
+  }
+  .text-blue-700 {
+    color: #1d4ed8;
+  }
+  .border-blue-100 {
+    border-color: var(--blue-100);
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
